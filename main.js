@@ -18,7 +18,6 @@ async function WebScrape(cutOffDate) {
       const scriptElement = article.querySelector("script.tracking-data");
       const trackingDataJSON = scriptElement?.textContent || null; //extracts the json in the script tag
 
-      let id = null;
       let title = null;
       let publishedDate = null;
 
