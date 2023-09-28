@@ -70,11 +70,13 @@ async function WebScrape(cutOffDate) {
 const scrapeInterval = 60000; // 1 minute
 var cutOffDate = new Date(0); //innitially sets the cutOffDate to 1/1/1970
 
+//Functions that run 
 async function scrapePeriodically() {
   while (true) {
     await WebScrape(cutOffDate);
-    await new Promise((response) => setTimeout(response, scrapeInterval));
-    cutOffDate = new Date();
+    await new Promise((response) => setTimeout(response, scrapeInterval)); //timeout in js
+    cutOffDate = new Date(); //cutoff date to now
+    
   }
 }
 
